@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NodeTranscodeGrid.iml" filepath="$PROJECT_DIR$/NodeTranscodeGrid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/transcode-hobbits.iml" filepath="$PROJECT_DIR$/transcode-hobbits.iml" />
     </modules>
   </component>
 </project>
