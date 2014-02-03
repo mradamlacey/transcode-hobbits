@@ -3,6 +3,9 @@
  * Module dependencies.
  */
 
+// New Relic monitoring integration
+var newrelic = require('newrelic');
+
 var express = require('express');
 var routes = require('./routes');
 var http = require('http');
@@ -33,6 +36,8 @@ app.configure(function(){
 // Configure routing
 routes(app);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
-});
+http.createServer(app)
+    .listen(app.get('port'), function(){
+        console.log('Express server listening on port ' + app.get('port'));
+    });
+

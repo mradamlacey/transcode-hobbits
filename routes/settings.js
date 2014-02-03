@@ -1,15 +1,17 @@
 
-exports.transcodeToMp4 = function(filePath, callback)
-{
-    // Simulate some work time...
-    setTimeout(function(){
+var config = require("../config");
 
-        var resp = { outputFilePath: "/output/file.mp4" };
+module.exports = function(app){
 
-        // Invoke the callback
-        callback(null, resp);
+    var controller = {};
+    controller.settings = function(req, res){
 
-    }, 3000)
+        res.json(config);
+    };
+
+    /////////////////////////////////////////////////////////////
+    // Define routes
+    /////////////////////////////////////////////////////////////
+    app.get('/_settings', controller.settings);
 
 }
-

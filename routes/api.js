@@ -1,3 +1,4 @@
+var transcode = require("../transcode/transcode");
 
 module.exports = function(app){
 
@@ -8,12 +9,30 @@ module.exports = function(app){
         // Validate the data
 
         // Generate an id for the task
+        var taskId = Math.floor((Math.random() * 100000) + 1);
 
         // Perform the transcode job synchronously
+        transcode.transcodeToMp4(req.body.filePath, function(error, response){
+            console.log("In transcode callback");
 
-        // Return task completion info to the caller
+            if(error != null)
+            {
+                var msg = "Error in completing transcode job, error code: " + error.errorCode;
+                console.log(msg);
+                res.json({ "errorCode": error.errorCode,
+                    "message": msg
+                });
+                return;
+            }
 
-        res.json({ taskId: 53939, taskCompletionTimeSec: 38983, outputFilePath: "/output/file.mp4" });
+            // Return task completion info to the caller
+            res.json({ "taskId": taskId,
+                "taskCompletionTimeSec": 38983,
+                "outputFilePath": response.outputFilePath
+            });
+
+        });
+
     };
 
     /////////////////////////////////////////////////////////////
