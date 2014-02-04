@@ -18,10 +18,9 @@ var parseStdOutResults = function (data) {
 
 };
 
-exports.transcodeToMp4 = function(filePath, callback)
+exports.transcodeToMp4 = function(inputFilePath, outputFilePath, callback)
 {
-    var inputFilePath = filePath;
-    var outputFilePath = "z:\\media\\output.mp4";
+    console.log("Transcoding: " + inputFilePath + " to: " + outputFilePath);
 
     var ffmpeg = spawn(config.ffmpegPath + "\\ffmpeg.exe",
         ["-i", inputFilePath, "-y", "-vcodec", "mpeg4", "-acodec", "aac", "-strict", "-2", outputFilePath],

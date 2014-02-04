@@ -1,3 +1,4 @@
+var queueMaster = require("../queue/master");
 
 module.exports = function(app){
 
@@ -18,14 +19,25 @@ module.exports = function(app){
     controller.videoTask = function(req, res)
     {
         // Validate the data
+        if(req.body.filePath == null)
+        {
+            res.statusCode = 400;
+            next(new Error("must supply filePath parameter"));
+            return;
+        }
+
+        var task = req.body;
 
         // Generate an id for the task
+        var taskId = Math.floor((Math.random() * 100000) + 1);
+
+        task.taskId = taskId;
 
         // Queue up the task
+        queueMaster.pushTranscodeTask(task);
 
         // Return task information to the caller
-
-        res.json({ message: "Work item accepted", taskId: 53939 });
+        res.json({ message: "Work item accepted", taskId: taskId });
     };
 
     controller.getVideoTask = function(req, res)

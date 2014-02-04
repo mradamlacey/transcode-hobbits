@@ -11,6 +11,9 @@ var routes = require('./routes');
 var http = require('http');
 var path = require('path');
 
+var master = require('./queue/master');
+var worker = require('./queue/worker');
+
 var app = express();
 app.set('port', process.env.PORT || 3000);
 app.configure(function(){
@@ -22,7 +25,7 @@ app.configure(function(){
     app.use(express.urlencoded());
     app.use(express.methodOverride());
     app.use(express.static(path.join(__dirname, 'public')));
-
+                        console.log("poo");
     app.use(app.router);
     app.use(express.bodyParser());
 
@@ -35,6 +38,9 @@ app.configure(function(){
 
 // Configure routing
 routes(app);
+
+// Initialize the queue master
+//master();
 
 http.createServer(app)
     .listen(app.get('port'), function(){

@@ -6,6 +6,9 @@ module.exports = function(app){
     controller.index = function(req, res){
         res.writeHead(200, {"Content-Type": "text/plain"});
         res.write("hello");
+        res.write("hello");
+        res.write("hello");
+        res.write("hello");
         res.end();
     };
 
