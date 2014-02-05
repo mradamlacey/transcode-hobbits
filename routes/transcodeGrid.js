@@ -1,4 +1,5 @@
 var queueMaster = require("../queue/master");
+var dataStore = require("../persistence/esDataStore");
 
 module.exports = function(app){
 
@@ -33,6 +34,9 @@ module.exports = function(app){
 
         task.taskId = taskId;
 
+        // Persist the task
+        dataStore.createTranscodeTask(task);
+
         // Queue up the task
         queueMaster.pushTranscodeTask(task);
 
@@ -47,7 +51,14 @@ module.exports = function(app){
 
         console.log("Retrieving video task: " + taskId)
 
-        res.json({ "taskId": taskId, status: "pending" });
+        dataStore.getTranscodeTask(taskId, function(error, response){
+            if(error) {
+                return res.send(500, { error: "Error retrieving"});
+            }
+
+            res.json(response);
+        });
+
     };
 
     /////////////////////////////////////////////////////////////

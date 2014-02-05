@@ -20,9 +20,9 @@ amqp.connect(config.rabbitMqUri).then(function(conn) {
         return ok.then(function() {
             console.log("[Master] queue: " + config.transcodeTaskQueueName + " available");
 
-            var msg = process.argv.slice(2).join(' ') || "Hello World!"
-            ch.sendToQueue(q, new Buffer(msg), {deliveryMode: true});
-            console.log(" [x] Sent '%s'", msg);
+            //var msg = process.argv.slice(2).join(' ') || "Hello World!"
+           // ch.sendToQueue(q, new Buffer(msg), {deliveryMode: true});
+            //console.log(" [x] Sent '%s'", msg);
 
             // Don't close the channel - we will reuse
             //return ch.close();
@@ -42,6 +42,6 @@ module.exports.pushTranscodeTask = function(task)
 
     channel.sendToQueue(q, new Buffer(msg), {deliveryMode: true});
 
-    console.log(" [x] Sent '%s'", msg);
+    console.log("[Master] pushed transcode task: '%s'", msg);
 }
 

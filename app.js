@@ -6,13 +6,15 @@
 // New Relic monitoring integration
 var newrelic = require('newrelic');
 
+var config = require("./config");
 var express = require('express');
 var routes = require('./routes');
 var http = require('http');
 var path = require('path');
 
 var master = require('./queue/master');
-var worker = require('./queue/worker');
+
+var fork = require("child_process").fork;
 
 var app = express();
 app.set('port', process.env.PORT || 3000);
@@ -25,7 +27,7 @@ app.configure(function(){
     app.use(express.urlencoded());
     app.use(express.methodOverride());
     app.use(express.static(path.join(__dirname, 'public')));
-                        console.log("poo");
+
     app.use(app.router);
     app.use(express.bodyParser());
 
@@ -39,11 +41,27 @@ app.configure(function(){
 // Configure routing
 routes(app);
 
-// Initialize the queue master
-//master();
-
 http.createServer(app)
     .listen(app.get('port'), function(){
         console.log('Express server listening on port ' + app.get('port'));
     });
+
+if(config.worker)
+{
+    console.log("Initialzing worker mode");
+
+    // Count the machine's CPUs
+    var cpuCount = require('os').cpus().length;
+
+    // Create a queue worker for each CPU
+    for (var i = 0; i < cpuCount; i += 1) {
+        var workerProcess = fork("./queue/worker.js", null, { silent: true });
+
+        if(workerProcess == null){
+
+            console.error("Unable to fork queue worker process");
+        }
+
+    }
+}
 

@@ -18,6 +18,12 @@ var parseStdOutResults = function (data) {
 
 };
 
+var echoProcessResults = function (data) {
+
+    console.log('[ffmpeg] ' + data);
+
+};
+
 exports.transcodeToMp4 = function(inputFilePath, outputFilePath, callback)
 {
     console.log("Transcoding: " + inputFilePath + " to: " + outputFilePath);
@@ -31,8 +37,8 @@ exports.transcodeToMp4 = function(inputFilePath, outputFilePath, callback)
     // Dont have the parent wait for this process to exit...
     ffmpeg.unref();
 
-    ffmpeg.stdout.on('data', parseStdOutResults);
-    ffmpeg.stderr.on('data', parseStdOutResults);
+    ffmpeg.stdout.on('data', echoProcessResults);
+    ffmpeg.stderr.on('data', echoProcessResults);
 
     ffmpeg.on('close', function (code) {
         console.log('[ffmpeg] exited with code ' + code);

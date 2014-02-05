@@ -1,20 +1,33 @@
+var pid = process.pid;
+console.log("[Worker] Starting queue worker: " + pid);
+
+process.on('uncaughtException', function(err) {
+
+    console.error(err);
+    process.exit();
+
+});
+
 var amqp = require('amqplib');
 var config = require("../config");
 var transcode = require("../transcode/transcode");
 var fs = require('fs');
+var dataStore = require("../persistence/esDataStore");
 
-amqp.connect('amqp://localhost').then(function(conn) {
+var LOG_ID = "[Worker " + pid + "] ";
 
-    console.log("[Worker] Connected to AMQP localhost");
+amqp.connect(config.rabbitMqUri).then(function(conn) {
+
+    console.log(LOG_ID + "Connected to AMQP: " + config.rabbitMqUri);
 
     conn.once('SIGINT', function() {
-        console.log("[Worker] Closing AMQP connection");
+        console.log(LOG_ID + "Closing AMQP connection");
         conn.close();
     });
 
     return conn.createChannel().then(function(ch) {
 
-        console.log("[Worker] Created channel");
+        console.log(LOG_ID + "Created channel");
 
         var ok = ch.assertQueue(config.transcodeTaskQueueName, {durable: true});
 
@@ -22,10 +35,10 @@ amqp.connect('amqp://localhost').then(function(conn) {
 
         ok = ok.then(function() {
             ch.consume(config.transcodeTaskQueueName, doWork, {noAck: false});
-            console.log("[Worker]  [*] Waiting for messages. To exit press CTRL+C");
+            console.log(LOG_ID + "Waiting for messages. To exit press CTRL+C");
         });
 
-        console.log("[Worker] returning ok...");
+        console.log(LOG_ID + "returning ok...");
 
         return ok;
 
@@ -38,12 +51,16 @@ amqp.connect('amqp://localhost').then(function(conn) {
             }
             catch(Error)
             {
-                console.error("[Worker] Unable to parse message: " + msg.content.toString());
+                console.error(LOG_ID + "Unable to parse message: " + msg.content.toString());
                 ch.ack(msg);
                 return;
             }
 
-            console.log("[Worker] Received '%s'", msg.content.toString());
+            task.workStartTimestamp = Date.now();
+
+            console.log(LOG_ID + "Received '%s'", msg.content.toString());
+
+            dataStore.updateTranscodeTaskStatus(task.taskId, "started");
 
             var filePathParts = task.filePath.split("\\");
             var fileNameWithExtension = filePathParts[filePathParts.length - 1];
@@ -54,27 +71,43 @@ amqp.connect('amqp://localhost').then(function(conn) {
             var inputFilePath = config.workFolderPath + "\\" + task.taskId + "." + extension;
             var transcodedOutputFilePath = config.workFolderPath + "\\" + task.taskId + ".mp4";
 
-            var readStreamPromise = fs.createReadStream(task.filePath);
-            var writeStreamPromise = fs.createWriteStream(inputFilePath);
-            readStreamPromise.pipe(writeStreamPromise);
+            fs.exists(task.filePath, function(exists){
 
-            writeStreamPromise.on("close", function(error, data){
-
-                transcode.transcodeToMp4(inputFilePath, transcodedOutputFilePath, function(error, response){
-
-                    if(error){
-                        console.error("[Worker] Error in transcoding video task");
-                        // Acknowledge the message
-                        ch.ack(msg);
-                        return;
-                    }
-
-                    console.log("[Worker] Successful transcoding: " + JSON.stringify(response));
-
-                    // Acknowledge the message
+                if(!exists){
+                    console.error("File: " + task.filePath + " does not exist, unable to process message");
                     ch.ack(msg);
-                });
+                }
+                else
+                {
+                    var readStreamPromise = fs.createReadStream(task.filePath);
+                    var writeStreamPromise = fs.createWriteStream(inputFilePath);
+                    readStreamPromise.pipe(writeStreamPromise);
 
+                    dataStore.updateTranscodeTaskStatus(task.taskId, "copying");
+
+                    writeStreamPromise.on("close", function(error, data){
+
+                        dataStore.updateTranscodeTaskStatus(task.taskId, "transcoding");
+
+                        transcode.transcodeToMp4(inputFilePath, transcodedOutputFilePath, function(error, response){
+
+                            if(error){
+                                console.error(LOG_ID + "Error in transcoding video task");
+                                // Acknowledge the message
+                                ch.ack(msg);
+                                return;
+                            }
+
+                            console.log(LOG_ID + "Successful transcoding: " + JSON.stringify(response));
+
+                            dataStore.updateCompletedTranscodeTask(task);
+
+                            // Acknowledge the message
+                            ch.ack(msg);
+                        });
+
+                    });
+                }
             });
 
         }
