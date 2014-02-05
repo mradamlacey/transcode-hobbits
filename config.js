@@ -1,6 +1,6 @@
 var config = {};
 
-config.ffmpegPath = "z:\\tools\\ffmpeg\\bin";
+config.ffmpegPath = __dirname + "\\tools";
 config.rabbitMqUri = "amqp://localhost";
 config.transcodeTaskQueueName = "transcodeVideoQueue";
 config.workFolderPath = "z:\\media";
@@ -9,6 +9,8 @@ config.web = {
 };
 config.master = true;
 config.worker = true;
+config.debugWorkerMode = false;
+config.workersPerCore = 0.5;
 config.elasticSearchHosts = [
     'http://irvlinidx01.dev.local:9200',
     'http://irvlinidx02.dev.local:9200',

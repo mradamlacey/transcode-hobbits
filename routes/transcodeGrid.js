@@ -44,6 +44,40 @@ module.exports = function(app){
         res.json({ message: "Work item accepted", taskId: taskId });
     };
 
+    controller.videoTasks = function(req, res)
+    {
+        var tasks = req.body;
+        var responses = [];
+
+        for (var i = 0; i < tasks.length; i++) {
+
+            var task = tasks[i];
+
+            // Validate the data
+            if (task.filePath == null) {
+                res.statusCode = 400;
+                next(new Error("must supply filePath parameter"));
+                return;
+            }
+
+            // Generate an id for the task
+            var taskId = Math.floor((Math.random() * 100000) + 1);
+
+            task.taskId = taskId;
+
+            // Persist the task
+            dataStore.createTranscodeTask(task);
+
+            // Queue up the task
+            queueMaster.pushTranscodeTask(task);
+
+            responses.push({ message: "Work item accepted", taskId: taskId })
+        }
+
+        // Return task information to the caller
+        res.json(responses);
+    };
+
     controller.getVideoTask = function(req, res)
     {
         // Return the current status of the video task
@@ -68,6 +102,7 @@ module.exports = function(app){
     app.get('/transcodeGrid/status', controller.status);
 
     app.post('/transcodeGrid/videoTask', controller.videoTask);
+    app.post('/transcodeGrid/videoTasks', controller.videoTasks);
 
     app.get('/transcodeGrid/videoTask/:id', controller.getVideoTask);
 

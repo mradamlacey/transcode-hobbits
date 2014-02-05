@@ -53,8 +53,10 @@ if(config.worker)
     // Count the machine's CPUs
     var cpuCount = require('os').cpus().length;
 
-    // Create a queue worker for each CPU
-    for (var i = 0; i < cpuCount; i += 1) {
+    var workers = Math.floor(cpuCount * config.workersPerCore);
+
+    // Create queue workers
+    for (var i = 0; i < workers; i += 1) {
         var workerProcess = fork("./queue/worker.js", null, { silent: true });
 
         if(workerProcess == null){
@@ -63,5 +65,9 @@ if(config.worker)
         }
 
     }
+}
+
+if(config.debugWorkerMode){
+    require("./queue/worker");
 }
 

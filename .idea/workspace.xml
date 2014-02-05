@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/persistence/esDataStore.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api.js" afterPath="$PROJECT_DIR$/routes/api.js" />
+    <list default="true" id="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" name="Default" comment="Fixes #4 - implements api/stats and api/throughput end points">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/ffmpeg.exe" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.js" afterPath="$PROJECT_DIR$/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/queue/master.js" afterPath="$PROJECT_DIR$/queue/master.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transcode/transcode.js" afterPath="$PROJECT_DIR$/transcode/transcode.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/transcodeGrid.js" afterPath="$PROJECT_DIR$/routes/transcodeGrid.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/queue/worker.js" afterPath="$PROJECT_DIR$/queue/worker.js" />
@@ -15,17 +12,17 @@
     </list>
     <ignored path="NodeTranscodeGrid.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391611888825" ignored="false" />
+    <file path="/Dummy.txt" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391633117719" ignored="false" />
     <file path="/package.json" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391452246253" ignored="false" />
-    <file path="/app.js" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391554229787" ignored="false" />
+    <file path="/app.js" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391636458518" ignored="false" />
     <file path="/index.js" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391463843686" ignored="false" />
     <file path="/settings.js" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391465940753" ignored="false" />
-    <file path="/transcodeGrid.js" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391632133023" ignored="false" />
+    <file path="/transcodeGrid.js" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391638282445" ignored="false" />
     <file path="/api.js" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391632891870" ignored="false" />
-    <file path="/config.js" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391613808901" ignored="false" />
-    <file path="/transcode.js" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391621281660" ignored="false" />
+    <file path="/config.js" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391638445212" ignored="false" />
+    <file path="/transcode.js" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391637398595" ignored="false" />
     <file path="/fragment.js" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391629385272" ignored="false" />
-    <file path="/worker.js" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391621056508" ignored="false" />
+    <file path="/worker.js" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391635695163" ignored="false" />
     <file path="/master.js" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391543674183" ignored="false" />
     <file path="/esDataStore.js" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391632961195" ignored="false" />
     <file path="$PROJECT_DIR$/node_modules/amqplib/lib/channel.js" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391615370506" ignored="false" />
@@ -90,37 +87,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="27" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="transcodeGrid.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/transcodeGrid.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="16" selection-start="1509" selection-end="1560" vertical-scroll-proportion="0.0">
+            <state line="62" column="0" selection-start="1609" selection-end="1609" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="esDataStore.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="esDataStore.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/persistence/esDataStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="312" column="56" selection-start="8868" selection-end="8868" vertical-scroll-proportion="0.95482546">
+            <state line="94" column="49" selection-start="2333" selection-end="2333" vertical-scroll-proportion="-3.2">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="config.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="45" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="9" selection-start="348" selection-end="348" vertical-scroll-proportion="-11.354838">
+            <state line="12" column="43" selection-start="352" selection-end="352" vertical-scroll-proportion="0.5106383">
               <folding />
             </state>
           </provider>
@@ -129,7 +126,7 @@
       <file leaf-file-name="transcode.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/transcode/transcode.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="47" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0">
+            <state line="101" column="18" selection-start="3217" selection-end="3217" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -138,16 +135,7 @@
       <file leaf-file-name="worker.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/queue/worker.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="63" selection-start="2810" selection-end="2810" vertical-scroll-proportion="-37.933334">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="master.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/queue/master.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="16" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0">
+            <state line="98" column="20" selection-start="3204" selection-end="3265" vertical-scroll-proportion="-9.8">
               <folding />
             </state>
           </provider>
@@ -202,14 +190,14 @@
         <option value="$PROJECT_DIR$/newrelic.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/queue/master.js" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/config.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/queue/worker.js" />
-        <option value="$PROJECT_DIR$/transcode/transcode.js" />
-        <option value="$PROJECT_DIR$/routes/transcodeGrid.js" />
         <option value="$PROJECT_DIR$/routes/api.js" />
         <option value="$PROJECT_DIR$/persistence/esDataStore.js" />
+        <option value="$PROJECT_DIR$/queue/worker.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/transcode/transcode.js" />
+        <option value="$PROJECT_DIR$/routes/transcodeGrid.js" />
+        <option value="$PROJECT_DIR$/config.js" />
       </list>
     </option>
   </component>
@@ -277,6 +265,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="transcode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeTranscodeGrid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="transcode-hobbits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tools" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -508,7 +510,11 @@
       <created>1391548700128</created>
       <updated>1391548700128</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixes #4 - implements api/stats and api/throughput end points">
+      <created>1391633076776</created>
+      <updated>1391633076776</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -526,6 +532,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -537,7 +544,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -584,7 +590,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixes #1 - implements basic REST API" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixes #4 - implements api/stats and api/throughput end points" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -602,6 +608,7 @@
     <MESSAGE value="#1 - add basic routes and API and modules" />
     <MESSAGE value="#1 - add transcode module to spawn ffmpeg" />
     <MESSAGE value="Fixes #1 - implements basic REST API" />
+    <MESSAGE value="Fixes #4 - implements api/stats and api/throughput end points" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -617,13 +624,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/transcode/transcode.js</url>
-          <line>30</line>
+          <line>31</line>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/queue/worker.js</url>
-          <line>27</line>
-          <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/routes/transcodeGrid.js</url>
@@ -632,18 +634,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/persistence/esDataStore.js</url>
-          <line>31</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/persistence/esDataStore.js</url>
           <line>289</line>
           <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/persistence/esDataStore.js</url>
-          <line>198</line>
-          <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/routes/api.js</url>
@@ -675,11 +667,36 @@
           <line>103</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/queue/worker.js</url>
+          <line>73</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/transcode/transcode.js</url>
+          <line>63</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/transcode/transcode.js</url>
+          <line>65</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/queue/worker.js</url>
+          <line>74</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/persistence/esDataStore.js</url>
+          <line>97</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="45" />
+      <option name="time" value="51" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -687,13 +704,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="25" selection-end="56" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.IntelliJIdea12/system/extLibs/nodejs-v0.10.20-src/core-modules-sources/lib/module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="456" column="0" selection-start="12819" selection-end="12819" vertical-scroll-proportion="0.3326886">
@@ -722,20 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="62" selection-start="778" selection-end="778" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="45" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="9" selection-start="348" selection-end="348" vertical-scroll-proportion="-11.354838">
@@ -746,20 +742,6 @@
     <entry file="file://$PROJECT_DIR$/queue/master.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="16" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/queue/worker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="63" selection-start="2810" selection-end="2810" vertical-scroll-proportion="-37.933334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/transcode/transcode.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="47" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -778,13 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/transcodeGrid.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="16" selection-start="1509" selection-end="1560" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/api.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="107" column="30" selection-start="3375" selection-end="3375" vertical-scroll-proportion="0.0">
@@ -794,7 +769,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/persistence/esDataStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="312" column="56" selection-start="8868" selection-end="8868" vertical-scroll-proportion="0.95482546">
+        <state line="94" column="49" selection-start="2333" selection-end="2333" vertical-scroll-proportion="-3.2">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="27" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/queue/worker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="20" selection-start="3204" selection-end="3265" vertical-scroll-proportion="-9.8">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/newrelic/node_modules/continuation-local-storage/node_modules/async-listener/glue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="182" column="0" selection-start="5593" selection-end="5593" vertical-scroll-proportion="0.3326886">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transcode/transcode.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="18" selection-start="3217" selection-end="3217" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/transcodeGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="0" selection-start="1609" selection-end="1609" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="43" selection-start="352" selection-end="352" vertical-scroll-proportion="0.5106383">
           <folding />
         </state>
       </provider>

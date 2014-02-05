@@ -71,6 +71,22 @@ amqp.connect(config.rabbitMqUri).then(function(conn) {
             var inputFilePath = config.workFolderPath + "\\" + task.taskId + "." + extension;
             var transcodedOutputFilePath = config.workFolderPath + "\\" + task.taskId + ".mp4";
 
+            transcode.transcodeToMp4Stream(task.filePath, transcodedOutputFilePath, function(error, response){
+                if(error){
+                    console.error(LOG_ID + "Error in transcoding video task");
+                    // Acknowledge the message
+                    return ch.ack(msg);
+                }
+
+                console.log(LOG_ID + "Successful transcoding: " + JSON.stringify(response));
+
+                dataStore.updateCompletedTranscodeTask(task);
+
+                // Acknowledge the message
+                ch.ack(msg);
+            });
+
+            /*
             fs.exists(task.filePath, function(exists){
 
                 if(!exists){
@@ -108,7 +124,7 @@ amqp.connect(config.rabbitMqUri).then(function(conn) {
 
                     });
                 }
-            });
+            });  */
 
         }
 
