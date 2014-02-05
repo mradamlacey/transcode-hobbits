@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" name="Default" comment="Fixes #4 - implements api/stats and api/throughput end points">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/ffmpeg.exe" />
+    <list default="true" id="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.js" afterPath="$PROJECT_DIR$/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transcode/transcode.js" afterPath="$PROJECT_DIR$/transcode/transcode.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/transcodeGrid.js" afterPath="$PROJECT_DIR$/routes/transcodeGrid.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/queue/worker.js" afterPath="$PROJECT_DIR$/queue/worker.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NodeTranscodeGrid.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391633117719" ignored="false" />
+    <file path="/Dummy.txt" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391639075389" ignored="false" />
     <file path="/package.json" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391452246253" ignored="false" />
-    <file path="/app.js" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391636458518" ignored="false" />
+    <file path="/app.js" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391639111148" ignored="false" />
     <file path="/index.js" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391463843686" ignored="false" />
     <file path="/settings.js" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391465940753" ignored="false" />
     <file path="/transcodeGrid.js" changelist="9e0ae9a5-b4c6-4ea1-a103-72885a404c7f" time="1391638282445" ignored="false" />
@@ -90,7 +85,7 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="27" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.0">
+            <state line="47" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -108,16 +103,16 @@
       <file leaf-file-name="esDataStore.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/persistence/esDataStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="49" selection-start="2333" selection-end="2333" vertical-scroll-proportion="-3.2">
+            <state line="94" column="49" selection-start="2333" selection-end="2333" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="43" selection-start="352" selection-end="352" vertical-scroll-proportion="0.5106383">
+            <state line="12" column="43" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -135,16 +130,16 @@
       <file leaf-file-name="worker.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/queue/worker.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="20" selection-start="3204" selection-end="3265" vertical-scroll-proportion="-9.8">
+            <state line="98" column="20" selection-start="3204" selection-end="3265" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="settings.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/settings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="46" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
+            <state line="6" column="45" selection-start="140" selection-end="140" vertical-scroll-proportion="0.15348837">
               <folding />
             </state>
           </provider>
@@ -186,7 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/routes/settings.js" />
         <option value="$PROJECT_DIR$/newrelic.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/queue/master.js" />
@@ -194,15 +188,16 @@
         <option value="$PROJECT_DIR$/routes/api.js" />
         <option value="$PROJECT_DIR$/persistence/esDataStore.js" />
         <option value="$PROJECT_DIR$/queue/worker.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/transcode/transcode.js" />
         <option value="$PROJECT_DIR$/routes/transcodeGrid.js" />
         <option value="$PROJECT_DIR$/config.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/routes/settings.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1928" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -235,6 +230,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -340,7 +336,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -357,8 +352,8 @@
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -378,6 +373,22 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="$PROJECT_DIR$">
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -406,22 +417,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="$PROJECT_DIR$">
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -514,11 +509,15 @@
       <created>1391633076776</created>
       <updated>1391633076776</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fixes #2, Fixes #3 - stores ffmpeg within the project, streams input from network without intermediate write to local filesystem, support scale factor for number of workers based on CPU count">
+      <created>1391638638528</created>
+      <updated>1391638638528</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -526,13 +525,12 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38452914" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38452914" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -544,6 +542,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -590,7 +589,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixes #4 - implements api/stats and api/throughput end points" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixes #2, Fixes #3 - stores ffmpeg within the project, streams input from network without intermediate write to local filesystem, support scale factor for number of workers based on CPU count" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -609,6 +608,7 @@
     <MESSAGE value="#1 - add transcode module to spawn ffmpeg" />
     <MESSAGE value="Fixes #1 - implements basic REST API" />
     <MESSAGE value="Fixes #4 - implements api/stats and api/throughput end points" />
+    <MESSAGE value="Fixes #2, Fixes #3 - stores ffmpeg within the project, streams input from network without intermediate write to local filesystem, support scale factor for number of workers based on CPU count" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -706,30 +706,22 @@
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/.IntelliJIdea12/system/extLibs/nodejs-v0.10.20-src/core-modules-sources/lib/module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="456" column="0" selection-start="12819" selection-end="12819" vertical-scroll-proportion="0.3326886">
-          <folding />
-        </state>
+        <state line="456" column="0" selection-start="12819" selection-end="12819" vertical-scroll-proportion="0.3326886" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/amqplib/lib/channel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="24" selection-start="3105" selection-end="3109" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="98" column="24" selection-start="3105" selection-end="3109" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/amqplib/lib/connection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="436" column="58" selection-start="14819" selection-end="14819" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="436" column="58" selection-start="14819" selection-end="14819" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/newrelic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="17" selection-start="639" selection-end="639" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="21" column="17" selection-start="639" selection-end="639" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
@@ -741,16 +733,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/queue/master.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="16" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="46" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="13" column="16" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/when/when.js">
@@ -769,30 +752,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/persistence/esDataStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="49" selection-start="2333" selection-end="2333" vertical-scroll-proportion="-3.2">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="27" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.0">
+        <state line="94" column="49" selection-start="2333" selection-end="2333" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/queue/worker.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="20" selection-start="3204" selection-end="3265" vertical-scroll-proportion="-9.8">
+        <state line="98" column="20" selection-start="3204" selection-end="3265" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/newrelic/node_modules/continuation-local-storage/node_modules/async-listener/glue.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="0" selection-start="5593" selection-end="5593" vertical-scroll-proportion="0.3326886">
-          <folding />
-        </state>
+        <state line="182" column="0" selection-start="5593" selection-end="5593" vertical-scroll-proportion="0.3326886" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/transcode/transcode.js">
@@ -811,7 +785,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="43" selection-start="352" selection-end="352" vertical-scroll-proportion="0.5106383">
+        <state line="12" column="43" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="45" selection-start="140" selection-end="140" vertical-scroll-proportion="0.15348837">
           <folding />
         </state>
       </provider>

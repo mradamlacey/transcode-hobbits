@@ -54,6 +54,7 @@ if(config.worker)
     var cpuCount = require('os').cpus().length;
 
     var workers = Math.floor(cpuCount * config.workersPerCore);
+    console.log("[app] Creating " + workers + " worker(s)");
 
     // Create queue workers
     for (var i = 0; i < workers; i += 1) {
